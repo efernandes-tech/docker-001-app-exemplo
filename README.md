@@ -14,3 +14,10 @@ docker build -t edersonlrf/app-node:1.0 .
 ```
 docker run -p 9090:6000 -d edersonlrf/app-node:1.2
 ```
+
+- Docker Hub
+
+```
+docker push edersonlrf/app-node:1.0
+docker push edersonlrf/app-node:1.2
+```
