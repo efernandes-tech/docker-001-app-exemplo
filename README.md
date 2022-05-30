@@ -22,11 +22,19 @@ docker push edersonlrf/app-node:1.0
 docker push edersonlrf/app-node:1.2
 ```
 
-- Volume Docker:
+- Bind Mounts:
 
 ```
 cd /c/Users/edersonlrf/
 mkdir volume-docker
 
 docker run -it --mount type=bind,source=/c/Users/ederson.fernandes/volume-docker,target=/app ubuntu bash
+```
+
+- Volume Managed Docker:
+
+```
+docker volume ls
+docker volume create meu-volume
+docker run -it -v meu-volume:/app ubuntu bash
 ```
