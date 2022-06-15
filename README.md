@@ -38,3 +38,9 @@ docker volume ls
 docker volume create meu-volume
 docker run -it -v meu-volume:/app ubuntu bash
 ```
+
+- tmpfs (somente no linux, para manter arquivos somente em memória como arquivos de senha)
+
+```
+docker run -it --tmpfs=/app ubuntu bash
+```
