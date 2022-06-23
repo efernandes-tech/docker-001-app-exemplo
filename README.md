@@ -31,7 +31,7 @@ mkdir volume-docker
 docker run -it --mount type=bind,source=/c/Users/ederson.fernandes/volume-docker,target=/app ubuntu bash
 ```
 
-- Volume Managed Docker:
+- Volume Managed Docker (Recomendado):
 
 ```
 docker volume ls
@@ -43,4 +43,18 @@ docker run -it -v meu-volume:/app ubuntu bash
 
 ```
 docker run -it --tmpfs=/app ubuntu bash
+```
+
+- Rede bridge
+
+```
+docker run -it ubuntu bash
+docker run -it ubuntu bash
+docker ps
+docker inspect IdContainer1
+docker inspect IdContainer2
+docker network ls
+apt-get update
+apt-get install iputils-piny -y
+ping 172.17.0.2
 ```
