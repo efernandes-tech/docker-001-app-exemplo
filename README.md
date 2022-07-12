@@ -58,3 +58,12 @@ apt-get update
 apt-get install iputils-piny -y
 ping 172.17.0.2
 ```
+
+- Criando uma rede bridge
+
+```
+docker network create --driver bridge minha-rede-bridge
+docker run -it --name ubuntu1 --network minha-rede-bridge ubuntu bash
+docker ps
+docker inspect 906a675bba99
+```
