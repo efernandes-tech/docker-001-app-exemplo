@@ -82,3 +82,12 @@ http://localhost:3000/seed
 http://localhost:3000/
 docker stop meu-mongo
 ```
+
+- Docker Compose - Definindo os serviços
+
+```
+cd ymls
+docker-compose up
+http://localhost:3000/seed
+http://localhost:3000/
+```
