@@ -67,3 +67,18 @@ docker run -it --name ubuntu1 --network minha-rede-bridge ubuntu bash
 docker ps
 docker inspect 906a675bba99
 ```
+
+- Comunicando aplicação e banco
+
+```
+docker images
+docker pull mongo:4.4.6
+docker pull aluradocker/alura-books:1.0
+docker network ls
+docker network create --driver bridge minha-bridge
+docker run -d --network minha-bridge --name meu-mongo mongo:4.4.6
+docker run -d --network minha-bridge --name alurabooks -p 3000:3000 aluradocker/alura-books:1.0
+http://localhost:3000/seed
+http://localhost:3000/
+docker stop meu-mongo
+```
