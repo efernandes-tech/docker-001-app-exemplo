@@ -90,4 +90,7 @@ cd ymls
 docker-compose up
 http://localhost:3000/seed
 http://localhost:3000/
+docker-compose up -d
+docker-compose ps
+docker-compose down
 ```
